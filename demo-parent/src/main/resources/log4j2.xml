@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="WARN">
+	<Appenders>
+		<Console name="Console" target="SYSTEM_OUT" follow="true">
+			<PatternLayout>
+				<pattern>%d %p %C{1.} [%t] %m%n</pattern>
+			</PatternLayout>
+		</Console>
+		<!-- <Console name="org.springframework.jdbc.core" additivity="true"> <level 
+			value="DEBUG" /> 日志输出地 <appender-ref ref="LOG.DEBUG" /> </Console> -->
+		<!-- Rolling File节点用来定义超过指定大小自动删除旧的创建新的Appender -->
+		<!-- 按日期每天生成log文件 -->
+		<RollingFile name="RollingFile" fileName="log/demo.log"
+			filePattern="log/demo-%d{yyyy-MM-dd}.log">
+			<PatternLayout pattern="%d %p %C{1.} [%t] %m%n" />
+			<Policies>
+				<TimeBasedTriggeringPolicy interval="1" />
+			</Policies>
+
+			<!-- log文件只打印信息 -->
+			<!-- 这儿为trace表示什么都可以打印出来了,其他几个级别分别为：TRACE、DEBUG、INFO、WARN、ERROR和FATAL -->
+			<Filters>
+				<ThresholdFilter level="INFO" onMatch="ACCEPT"
+					onMismatch="DENY" />
+			</Filters>
+		</RollingFile>
+	</Appenders>
+	<Loggers>
+		<!-- 输出info级别信息 -->
+		<Root level="INFO">
+			<AppenderRef ref="Console" />
+			<AppenderRef ref="RollingFile" />
+		</Root>
+		<logger name="org.springframework.jdbc.core.JdbcTemplate" level="debug" additivity="true">
+			<!-- <AppenderRef ref="Console"/> -->
+			<!-- 日志输出地 -->
+			<!-- <appender-ref ref="LOG.DEBUG" /> -->
+		</logger>
+	</Loggers>
+</Configuration> 
