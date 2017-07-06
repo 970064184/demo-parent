@@ -1,0 +1,8 @@
+#本地：- local
+#测试服务器72：- dev
+#外网：- prod
+spring:
+  profiles:
+    active:
+    - local
+

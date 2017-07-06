@@ -31,3 +31,6 @@
 2017-07-04 15:32:33,735 INFO o.a.j.l.DirectJDKLog [http-nio-8099-exec-1] Initializing Spring FrameworkServlet 'dispatcherServlet'
 2017-07-04 15:32:33,735 INFO o.s.w.s.FrameworkServlet [http-nio-8099-exec-1] FrameworkServlet 'dispatcherServlet': initialization started
 2017-07-04 15:32:33,757 INFO o.s.w.s.FrameworkServlet [http-nio-8099-exec-1] FrameworkServlet 'dispatcherServlet': initialization completed in 21 ms
+2017-07-04 19:04:46,983 INFO o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin [RMI TCP Connection(2)-192.168.0.124] Application shutdown requested.
+2017-07-04 19:04:46,987 INFO o.s.c.s.AbstractApplicationContext [RMI TCP Connection(2)-192.168.0.124] Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@f0da945: startup date [Tue Jul 04 15:31:51 CST 2017]; root of context hierarchy
+2017-07-04 19:04:47,010 INFO o.s.j.e.MBeanExporter [RMI TCP Connection(2)-192.168.0.124] Unregistering JMX-exposed beans on shutdown

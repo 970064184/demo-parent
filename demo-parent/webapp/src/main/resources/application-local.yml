@@ -1,0 +1,29 @@
+server: 
+  port: 8888
+
+user: 
+  role: dev
+#时间配置
+spring:
+  jackson:  
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: Asia/Chongqing
+  thymeleaf:
+    prefix: classpath:/templates
+    suffix: .html
+    mode: LEGACYHTML5
+    encoding: UTF-8
+    content-type: text/html
+    cache: false
+
+logging:
+  config: classpath:log4j2.xml
+  
+  #spring:
+#  thymeleaf:
+#    prefix: classpath:/templates
+#    suffix: .html
+#    mode: LEGACYHTML5
+#    encoding: UTF-8
+#    content-type: text/html
+#    cache: false
