@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>后台管理系统</title>
+<link rel="stylesheet" href="/css/bootstrap/bootstrap.min.css"
+	type="text/css" />
+<link rel="stylesheet" href="/css/bootstrap/bootstrap.addtabs.css"
+	type="text/css" />
+<script type="text/javascript" src="/js/jquery/jquery.min.js"></script>
+<script type="text/javascript" src="/js/bootstrap/bootstrap.addtabs.js"></script>
+<script type="text/javascript" src="/js/index.js"></script>
+</head>
+<body>
+	<!-- <div th:text="${hello}"></div> -->
+	<div class="panel panel-default">
+		<div class="panel-body">
+			<div class="row">
+				<div class="col-sm-3">
+					<ul class="list-group">
+						<a class="list-group-item" data-addtab="mail"
+							data-url="/example/hi1.html">mailbox</a>
+						<a class="list-group-item" data-addtab="mail1"
+							data-url="/example/hi2.html" data-ajax="true">Use Ajax</a>
+						<a class="list-group-item" data-addtab="sina"
+							data-url="http://sina.com.cn"> 新浪 </a>
+						<a class="list-group-item" data-addtab="baidu"
+							data-url="http://baidu.com"> 百度 </a>
+					</ul>
+				</div>
+				<div class="col-sm-9">
+					<div id="tabs">
+						<!-- Nav tabs -->
+						<ul class="nav nav-tabs" role="tablist">
+							<li role="presentation" class="active"><a href="#home"
+								aria-controls="home" role="tab" data-toggle="tab">Home</a></li>
+						</ul>
+
+						<!-- Tab panes -->
+						<div class="tab-content">
+							<div role="tabpanel" class="tab-pane active" id="home">I'm
+								a homepage.</div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>
