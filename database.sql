@@ -1,10 +1,8 @@
 /*
-SQLyog Job Agent v11.24 (32 bit) Copyright(c) Webyog Inc. All Rights Reserved.
-
-
+SQLyog Ultimate v11.24 (32 bit)
 MySQL - 5.5.48 : Database - frameworkdemo
 *********************************************************************
-*/
+*/
 
 /*!40101 SET NAMES utf8 */;
 
@@ -14,7 +12,7 @@ MySQL - 5.5.48 : Database - frameworkdemo
 /*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
-CREATE DATABASE /*!32312 IF NOT EXISTS*/`frameworkdemo` /*!40100 DEFAULT CHARACTER SET latin1 */;
+CREATE DATABASE /*!32312 IF NOT EXISTS*/`frameworkdemo` /*!40100 DEFAULT CHARACTER SET utf8 */;
 
 USE `frameworkdemo`;
 
@@ -52,9 +50,11 @@ CREATE TABLE `s_user` (
   `create` datetime DEFAULT NULL COMMENT '创建时间',
   `update` datetime DEFAULT NULL COMMENT '更新时间',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
 /*Data for the table `s_user` */
+
+insert  into `s_user`(`id`,`user_code`,`user_name`,`email`,`phone`,`password`,`department_id`,`address`,`create`,`update`) values (1,'123','test','123@qq.com','13800013800','123','1','广东','2017-06-01 18:47:10','2017-07-16 18:47:36');
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
 /*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
