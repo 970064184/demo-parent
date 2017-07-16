@@ -12,4 +12,10 @@ public class LoginController {
 		mv.addObject("hello", "hi");
 		return mv;
 	}
+	@RequestMapping(value="/userIndex")
+	public ModelAndView userIndex(){
+		ModelAndView mv=new ModelAndView("/common/userIndex");
+		mv.addObject("userIndex", "userIndex");
+		return mv;
+	}
 }
