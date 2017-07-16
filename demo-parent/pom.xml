@@ -28,15 +28,12 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-jpa</artifactId>
-<<<<<<< HEAD
-=======
 			<exclusions>
 				<exclusion>
 					<groupId>org.springframework.boot</groupId>
 					<artifactId>spring-boot-starter-logging</artifactId>
 				</exclusion>
 			</exclusions>
->>>>>>> 1f239ad4773f715c47f23656a9d5821a5e9df3f9
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
