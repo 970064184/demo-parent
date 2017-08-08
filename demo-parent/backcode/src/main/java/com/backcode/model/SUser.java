@@ -21,25 +21,25 @@ public class SUser extends BaseModel implements Serializable {
 	 */
 	private static final long serialVersionUID = -7112874092709002377L;
 
-	private String address;
+	private String address;//地址
 
-	private Date create;
+	private Date create;//创建时间
 
 	@Column(name="department_id")
-	private String departmentId;
+	private String departmentId;//部门ID
 
-	private String email;
+	private String email;//邮件
 
-	private String password;
+	private String password;//密码
 
-	private String phone;
+	private String phone;//电话
 
-	private Date update;
+	private Date update;//更新时间
 
 	@Column(name="user_code")
-	private String userCode;
+	private String userCode;//用户账号
 
-	@Column(name="user_name")
+	@Column(name="user_name")//用户名
 	private String userName;
 
 	public SUser() {
