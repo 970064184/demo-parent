@@ -4,7 +4,71 @@
 var userIndex={};
 $(function(){
 	userIndex.initTable();
+	userIndex.validators();
+	 
 })
+/**
+ * 点击新增按钮事件
+ */
+userIndex.addUser=function(){
+	form.reset('#userForm');//表单清空
+	validator.reset(userIndex.params);//重置验证表单
+	$("#saveModal").modal('show');//打开弹出窗
+	$("#saveModal").draggable();//为模态对话框添加拖拽
+	userIndex.url="";
+}
+/**
+ * 表单验证
+ */
+userIndex.validators=function(){
+	userIndex.params={
+			id:'#userForm',
+			fields:{
+				userName: {
+                    validators: {
+                        notEmpty: {
+                            message: '用户名不能为空'
+                        }
+                    }
+                },
+                password: {
+                	validators: {
+                		notEmpty: {
+                			message: '密码不能为空'
+                		}
+                	}
+                },
+                userCode: {
+                	validators: {
+                		notEmpty: {
+                			message: '用户账号不能为空'
+                		}
+                	}
+                },
+                departmentId: {
+                	validators: {
+                		notEmpty: {
+                			message: '部门不能为空'
+                		}
+                	}
+                },
+			},
+			success:userIndex.submit()
+	}
+	validator.init(userIndex.params);
+}
+/**
+ * 表单提交
+ */
+userIndex.submit=function(){
+	form.submit({
+		id:"#userForm",
+		url:userIndex.url,
+		success:function(date){
+			
+		}
+	});
+}
 var data=[{
 	"userName":"小张",
 	"userCode":"01",
@@ -68,6 +132,10 @@ userIndex.initTable=function(){
         	title:'部门名称',
         	align:'center',
         },{
+        	field:'address',
+        	title:'地址',
+        	align:'center',
+        },{
         	field:'email',
         	title:'邮箱',
         	align:'center',
@@ -81,7 +149,9 @@ userIndex.initTable=function(){
         	width:280,
         	formatter:function(value,row,index){
         		var id=row.id;
-        		return "";
+        		var btn="<input type='button' class='btn btn-primary btn-xs' value='编辑' onclick='updateUser("+id+")'/>\t" +
+                		"<input  type='button' class='btn btn-primary btn-xs' value='删除' onclick='deleteUser("+id+")'/>\t";
+        		return btn;
         	}
         }]
 	});
